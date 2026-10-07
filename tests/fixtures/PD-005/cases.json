@@ -1,0 +1,32 @@
+{
+  "ruleId": "PD-005",
+  "configure": {
+    "PD-005": {
+      "values": [
+        "待答复",
+        "已答复",
+        "已投诉",
+        "已处理完毕",
+        "已撤回"
+      ]
+    }
+  },
+  "pairs": [
+    {
+      "name": "expected-state",
+      "material": "PD-005-compliant.json",
+      "expect": {
+        "ruleId": "PD-005",
+        "count": 0
+      }
+    },
+    {
+      "name": "difference-present",
+      "material": "PD-005-unsafe.json",
+      "expect": {
+        "ruleId": "PD-005",
+        "count": 1
+      }
+    }
+  ]
+}
