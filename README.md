@@ -1,4 +1,23 @@
-# dsh-protest-deadline
+# dsh-protest-deadline — Query and complaint register date and deadline check
+
+`dsh-protest-deadline` reads one query-and-complaint register (质疑与投诉台账) — the project header plus one row per query — and checks what such a register can be held to mechanically: that the date the query was raised or the date it was answered is recorded, that the dates parse and follow one another, that the reply falls inside the deadline the register itself states, that every status comes from your own vocabulary, that the query numbers are unique, and that the header names the procurement project.
+
+## What it answers
+
+| You ask | What it answers |
+|---|---|
+| A row leaves both the date the query was raised and the date it was answered blank. Is that reported? | Yes. `PD-001` requires at least one of `raisedAt` and `replyAt` on every row and reports the row where both are empty. It checks only that one of the two is filled, not whether the query was raised inside the legal period: that needs the date the supplier knew of the harm, the service date and a working-day count a register usually does not carry. |
+| The reply date is written earlier than the raise date. Is that caught? | `PD-002` compares the raise date with the reply date row by row and reports `raisedAt` when it is later than `replyAt`; the same day counts as not later. A value it cannot parse — `2026年3月15日`, say, where `2026-03-15`, `2026/3/15` or `2026-03-15 09:30` would be read — is reported on that row instead of being passed over quietly. The rule only orders the two dates the register carries. |
+| Our reply went out after the reply deadline recorded in the register. Was it late? | `PD-003` hard-codes no day count and cannot say “late”: it compares the actual reply date with the deadline written in the register's own `replyDueAt` column, so a finding means “this disagrees with the deadline you recorded”. With that column empty there is nothing to compare against and the rule reports itself in `skipped`, rather than assuming a period. |
+| The status column says 已答复, yet nothing came back for it. Why? | `PD-005` compares the status with the vocabulary you configure, and `values` ships empty, so as delivered the rule reports itself in `skipped` — the choice of values belongs to your institution, not to the engine — instead of passing silently. Fill `values` with your own list (待答复, 已答复, 已投诉, 已撤回, …) and any value not on it is reported row by row. It checks that the value is on the list, never how the query should be handled. |
+| The header names the project but carries no header-level raise date. Is something missing? | No. `PD-006` checks the header for the procurement project only: its `fields` default to `[project]`, because the raise date is normally a per-row column. If your form does state it in the header, the rule's own note says to set `fields` to `[project, raisedAt]`. A missing project is reported against the header, not against a row. |
+| The same query number appears on two rows. | `PD-007` reports the second row and names the first, comparing the numbers with whitespace ignored. A repeat usually means the same query was registered twice or a number was copied — telling those apart is a human call. If the register carries no number column, the rule reports that it does not apply rather than passing. |
+
+## Standards it follows
+
+| Document | Number | Cited by rules |
+|---|---|---|
+| 《政府采购质疑和投诉办法》 | 财政部令第94号（2017 年 12 月 26 日公布，自 2018 年 3 月 1 日起施行；六章四十五条。⚠️ 本令第四十五条同时废止财政部令第20号《政府采购供应商投诉处理办法》） | PD-001, PD-002, PD-003, PD-004, PD-005, PD-006, PD-007 |
 
 **Boundary:** this plugin checks a **质疑与投诉台账** for what a register can be held to mechanically — that
 the key dates are recorded, that they parse and follow one another, that a reply falls inside the deadline

@@ -1,4 +1,23 @@
-# dsh-protest-deadline
+# dsh-protest-deadline — Verificación de fechas y plazos del registro de impugnaciones y denuncias
+
+`dsh-protest-deadline` lee un registro de impugnaciones y denuncias (质疑与投诉台账) —la cabecera del proyecto más una fila por impugnación— y comprueba lo que un registro así puede sostener mecánicamente: que esté registrada la fecha de presentación de la impugnación o la fecha de su respuesta, que las fechas se puedan analizar y sigan un orden, que la respuesta caiga dentro del plazo que el propio registro declara, que cada estado provenga de su propio vocabulario, que los números de impugnación no se repitan y que la cabecera nombre el proyecto de contratación.
+
+## Qué responde
+
+| Usted pregunta | Qué responde |
+|---|---|
+| Una fila deja en blanco tanto la fecha de presentación como la de respuesta. ¿Se informa de ello? | Sí. `PD-001` exige que en cada fila esté relleno al menos uno de `raisedAt` y `replyAt`, e informa de la fila en la que ambos están vacíos. Solo comprueba que uno de los dos esté puesto, no si la impugnación se presentó dentro del plazo legal: eso exige la fecha en que el proveedor conoció el daño, la fecha de notificación y un cómputo en días hábiles que el registro no suele llevar. |
+| La fecha de respuesta figura antes que la fecha de presentación. ¿Se detecta? | `PD-002` compara fila por fila la fecha de presentación con la de respuesta e informa de `raisedAt` cuando es posterior a `replyAt`; el mismo día no cuenta como posterior. Un valor que no puede analizar —`2026年3月15日`, por ejemplo, cuando `2026-03-15`, `2026/3/15` o `2026-03-15 09:30` sí se leen— se informa en esa fila en lugar de dejarlo pasar en silencio. La regla solo ordena las dos fechas que el registro contiene. |
+| Nuestra respuesta salió después del plazo de respuesta registrado en el registro. ¿Fue tardía? | `PD-003` no incorpora ningún número de días y no puede decir «tardía»: compara la fecha real de la respuesta con el plazo escrito en la propia columna `replyDueAt` del registro, de modo que un hallazgo significa «esto no concuerda con el plazo que usted registró». Si esa columna está vacía no hay con qué comparar y la regla aparece en `skipped`, en lugar de suponer un plazo. |
+| La columna de estado dice 已答复 y no se informó nada de ella. ¿Por qué? | `PD-005` contrasta el estado con el vocabulario que usted configure, y `values` viene vacío, así que tal como se entrega la regla aparece en `skipped` —la elección de los valores corresponde a su institución, no al motor— en lugar de pasar en silencio. Rellene `values` con su propia lista (待答复, 已答复, 已投诉, 已撤回, …) y todo valor que no figure en ella se informará fila por fila. Solo comprueba que el valor esté en la lista, nunca cómo debe tramitarse la impugnación. |
+| La cabecera nombra el proyecto pero no lleva la fecha de presentación a nivel de cabecera. ¿Falta algo? | No. `PD-006` solo comprueba en la cabecera el proyecto de contratación: su `fields` por defecto es `[project]`, porque la fecha de presentación suele ser una columna por fila. Si su formulario sí la declara en la cabecera, la propia nota de la regla indica poner `fields` en `[project, raisedAt]`. La falta del proyecto se informa contra la cabecera, no contra una fila. |
+| El mismo número de impugnación aparece en dos filas. | `PD-007` informa de la segunda fila y nombra la primera, comparando los números sin tener en cuenta los espacios. Una repetición suele significar que la misma impugnación se registró dos veces o que se copió mal un número: distinguirlo es una decisión humana. Si el registro no lleva columna de número, la regla informa de que no se aplica en lugar de pasar. |
+
+## Normas que sigue
+
+| Documento | Número | Reglas que lo citan |
+|---|---|---|
+| 《政府采购质疑和投诉办法》 | 财政部令第94号（2017 年 12 月 26 日公布，自 2018 年 3 月 1 日起施行；六章四十五条。⚠️ 本令第四十五条同时废止财政部令第20号《政府采购供应商投诉处理办法》） | PD-001, PD-002, PD-003, PD-004, PD-005, PD-006, PD-007 |
 
 **Boundary:** this plugin checks a **质疑与投诉台账** for what a register can be held to mechanically — that
 the key dates are recorded, that they parse and follow one another, that a reply falls inside the deadline

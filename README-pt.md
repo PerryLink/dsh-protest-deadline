@@ -1,4 +1,23 @@
-# dsh-protest-deadline
+# dsh-protest-deadline — Verificação de datas e prazos do registo de impugnações e denúncias
+
+`dsh-protest-deadline` lê um registo de impugnações e denúncias (质疑与投诉台账) —o cabeçalho do projeto mais uma linha por impugnação— e verifica o que um registo desses pode sustentar mecanicamente: se está registada a data de apresentação da impugnação ou a data da resposta, se as datas são analisáveis e seguem uma ordem, se a resposta cai dentro do prazo que o próprio registo declara, se cada estado vem do seu próprio vocabulário, se os números de impugnação não se repetem e se o cabeçalho nomeia o projeto de contratação.
+
+## O que ele responde
+
+| Você pergunta | O que ele responde |
+|---|---|
+| Uma linha deixa em branco tanto a data de apresentação como a da resposta. Isso é reportado? | Sim. `PD-001` exige que em cada linha esteja preenchido pelo menos um de `raisedAt` e `replyAt`, e reporta a linha em que ambos estão vazios. Verifica apenas que um dos dois está preenchido, não se a impugnação foi apresentada dentro do prazo legal: isso exige a data em que o fornecedor teve conhecimento, a data da notificação e uma contagem em dias úteis que o registo normalmente não traz. |
+| A data da resposta está escrita antes da data de apresentação. Isso é detetado? | `PD-002` compara linha a linha a data de apresentação com a da resposta e reporta `raisedAt` quando é posterior a `replyAt`; o mesmo dia não conta como posterior. Um valor que não consegue analisar —`2026年3月15日`, por exemplo, quando `2026-03-15`, `2026/3/15` ou `2026-03-15 09:30` são lidos— é reportado nessa linha em vez de ser deixado passar em silêncio. A regra apenas ordena as duas datas que o registo contém. |
+| A nossa resposta saiu depois do prazo de resposta registado no registo. Foi tardia? | `PD-003` não fixa qualquer número de dias e não pode dizer «tardia»: compara a data real da resposta com o prazo escrito na própria coluna `replyDueAt` do registo, pelo que um achado significa «isto não concorda com o prazo que registou». Com essa coluna vazia não há termo de comparação e a regra aparece em `skipped`, em vez de presumir um prazo. |
+| A coluna de estado diz 已答复 e nada foi reportado sobre ela. Porquê? | `PD-005` confronta o estado com o vocabulário que configurar, e `values` vem vazio, pelo que tal como é entregue a regra aparece em `skipped` —a escolha dos valores cabe à sua instituição, não ao motor— em vez de passar em silêncio. Preencha `values` com a sua própria lista (待答复, 已答复, 已投诉, 已撤回, …) e qualquer valor fora dela será reportado linha a linha. Verifica apenas se o valor consta da lista, nunca como a impugnação deve ser tratada. |
+| O cabeçalho nomeia o projeto mas não traz a data de apresentação ao nível do cabeçalho. Falta algo? | Não. `PD-006` verifica no cabeçalho apenas o projeto de contratação: o seu `fields` predefinido é `[project]`, porque a data de apresentação é normalmente uma coluna por linha. Se o seu formulário a declara no cabeçalho, a própria nota da regra indica pôr `fields` em `[project, raisedAt]`. A falta do projeto é reportada contra o cabeçalho, não contra uma linha. |
+| O mesmo número de impugnação aparece em duas linhas. | `PD-007` reporta a segunda linha e nomeia a primeira, comparando os números sem considerar espaços. Uma repetição costuma significar que a mesma impugnação foi registada duas vezes ou que um número foi copiado mal: distingui-lo é uma decisão humana. Se o registo não tiver coluna de número, a regra reporta que não se aplica em vez de passar. |
+
+## Normas que segue
+
+| Documento | Número | Regras que o citam |
+|---|---|---|
+| 《政府采购质疑和投诉办法》 | 财政部令第94号（2017 年 12 月 26 日公布，自 2018 年 3 月 1 日起施行；六章四十五条。⚠️ 本令第四十五条同时废止财政部令第20号《政府采购供应商投诉处理办法》） | PD-001, PD-002, PD-003, PD-004, PD-005, PD-006, PD-007 |
 
 **Boundary:** this plugin checks a **质疑与投诉台账** for what a register can be held to mechanically — that
 the key dates are recorded, that they parse and follow one another, that a reply falls inside the deadline
