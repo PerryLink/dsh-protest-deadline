@@ -45,8 +45,7 @@ working-day basis that a ledger usually does not record.**
 ## Install
 
 ```sh
-pnpm pack
-dsh plugin --profile <name> add ./*.tgz
+dsh plugin --profile <name> add dsh-protest-deadline
 dsh --profile <name> --dump-config | grep 'dsh-protest-deadline'
 ```
 
