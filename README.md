@@ -64,14 +64,13 @@ row per query — applies a versioned rule pack, and returns a report.
 
 | Rule | Check | Severity | Basis kind |
 |---|---|---|---|
-| `PD-001` | a raise date or a reply date is recorded | warn | principle |
-| `PD-002` | the reply date is not earlier than the raise date | warn | principle |
+| `PD-001` | a raise date or a reply date is recorded | warn | direct |
+| `PD-002` | the reply date is not earlier than the raise date | warn | direct |
 | `PD-003` | the reply falls inside the recorded deadline | info | local |
-| `PD-004` | the complaint date is not earlier than the reply date | warn | principle |
+| `PD-004` | the complaint date is not earlier than the reply date | warn | direct |
 | `PD-005` | the status comes from your vocabulary (off by default) | info | local |
 | `PD-006` | the register names its procurement project | warn | principle |
 | `PD-007` | query numbers are unique in the register | warn | principle |
-
 ## Install
 
 ```sh
