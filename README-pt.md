@@ -1,6 +1,14 @@
 # dsh-protest-deadline — Verificação de datas e prazos do registo de impugnações e denúncias
 
+[![DSH Market](https://raw.githubusercontent.com/2BingLing/dsh-market/master/assets/readme/badge-listed-en.svg)](https://dsh.market/)
+
 `dsh-protest-deadline` lê um registo de impugnações e denúncias (质疑与投诉台账) —o cabeçalho do projeto mais uma linha por impugnação— e verifica o que um registo desses pode sustentar mecanicamente: se está registada a data de apresentação da impugnação ou a data da resposta, se as datas são analisáveis e seguem uma ordem, se a resposta cai dentro do prazo que o próprio registo declara, se cada estado vem do seu próprio vocabulário, se os números de impugnação não se repetem e se o cabeçalho nomeia o projeto de contratação.
+
+## Como é a saída
+
+![Terminal demo of dsh-protest-deadline: real output over its PD-002 fixture](https://raw.githubusercontent.com/PerryLink/dsh-protest-deadline/main/docs/assets/dsh-protest-deadline-demo.png)
+
+Saída real deste plugin sobre o seu próprio fixture de teste `PD-002` — não é uma simulação. O pacote de regras não inventa citações, por isso cada achado nomeia a cláusula aplicada e avisa que o seu texto não foi obtido.
 
 ## O que ele responde
 

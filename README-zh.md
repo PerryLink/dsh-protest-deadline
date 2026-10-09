@@ -1,6 +1,14 @@
 # dsh-protest-deadline — 质疑与投诉期限核对
 
+[![DSH Market](https://raw.githubusercontent.com/2BingLing/dsh-market/master/assets/readme/badge-listed-en.svg)](https://dsh.market/)
+
 `dsh-protest-deadline` 读取一份质疑与投诉台账——项目表头加每条质疑一行——核对这份台账能够被机械核对的部分：质疑提出日期或答复日期是否填写、日期是否可解析且先后关系是否成立、答复是否落在台账自己写明的答复期限内、处理状态是否取自本机构口径、质疑函编号是否唯一、表头是否写明采购项目。
+
+## 实际输出长什么样
+
+![Terminal demo of dsh-protest-deadline: real output over its PD-002 fixture](https://raw.githubusercontent.com/PerryLink/dsh-protest-deadline/main/docs/assets/dsh-protest-deadline-demo.png)
+
+本插件对自己 `PD-002` 测试夹具的**真实输出**，不是示意图。规则库不伪造引文，因此每条发现都会同时写明所引条款，以及该条款原文本次未取得。
 
 ## 它回答什么问题
 
