@@ -1,0 +1,14 @@
+[
+  {
+    "path": "docs/assets/dsh-protest-deadline-hero.png",
+    "kind": "hero",
+    "alt": "dsh-protest-deadline terminal output",
+    "caption": "Real dsh-protest-deadline checker output; 31 tests passed."
+  },
+  {
+    "path": "docs/assets/dsh-protest-deadline-demo.gif",
+    "kind": "demo",
+    "alt": "Animated dsh-protest-deadline terminal session",
+    "caption": "The same run, assembled line by line."
+  }
+]
