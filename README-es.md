@@ -4,6 +4,13 @@
 
 `dsh-protest-deadline` lee un registro de impugnaciones y denuncias (质疑与投诉台账) —la cabecera del proyecto más una fila por impugnación— y comprueba lo que un registro así puede sostener mecánicamente: que esté registrada la fecha de presentación de la impugnación o la fecha de su respuesta, que las fechas se puedan analizar y sigan un orden, que la respuesta caiga dentro del plazo que el propio registro declara, que cada estado provenga de su propio vocabulario, que los números de impugnación no se repitan y que la cabecera nombre el proyecto de contratación.
 
+## Install
+
+```sh
+dsh plugin --profile <name> add dsh-protest-deadline
+dsh --profile <name> --dump-config | grep 'dsh-protest-deadline'
+```
+
 ## Cómo se ve la salida
 
 ![Terminal demo of dsh-protest-deadline: real output over its PD-002 fixture](https://raw.githubusercontent.com/PerryLink/dsh-protest-deadline/main/docs/assets/dsh-protest-deadline-hero.png)
@@ -70,13 +77,6 @@ working-day basis that a ledger usually does not record.**
 ## What it does
 
 La tabla de reglas, los campos y el comportamiento detallado están en [README.md](README.md#what-it-does) (versión principal en inglés). El plugin sólo enumera divergencias literales frente a las cláusulas citadas e indica en `skipped` cada comprobación que no pudo ejecutarse.
-
-## Install
-
-```sh
-dsh plugin --profile <name> add dsh-protest-deadline
-dsh --profile <name> --dump-config | grep 'dsh-protest-deadline'
-```
 
 ## Configuration
 

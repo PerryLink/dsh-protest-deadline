@@ -4,6 +4,13 @@
 
 `dsh-protest-deadline` 读取一份质疑与投诉台账——项目表头加每条质疑一行——核对这份台账能够被机械核对的部分：质疑提出日期或答复日期是否填写、日期是否可解析且先后关系是否成立、答复是否落在台账自己写明的答复期限内、处理状态是否取自本机构口径、质疑函编号是否唯一、表头是否写明采购项目。
 
+## Install
+
+```sh
+dsh plugin --profile <name> add dsh-protest-deadline
+dsh --profile <name> --dump-config | grep 'dsh-protest-deadline'
+```
+
 ## 实际输出长什么样
 
 ![Terminal demo of dsh-protest-deadline: real output over its PD-002 fixture](https://raw.githubusercontent.com/PerryLink/dsh-protest-deadline/main/docs/assets/dsh-protest-deadline-hero.png)
@@ -70,13 +77,6 @@ working-day basis that a ledger usually does not record.**
 ## What it does
 
 规则表、字段说明与行为细节见 [README.md](README.md#what-it-does)（英文主版本）。本插件只列出材料与所引条款之间的字面差异，并对无法执行的检查在 `skipped` 中逐项说明。
-
-## Install
-
-```sh
-dsh plugin --profile <name> add dsh-protest-deadline
-dsh --profile <name> --dump-config | grep 'dsh-protest-deadline'
-```
 
 ## Configuration
 

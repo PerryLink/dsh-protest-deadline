@@ -4,6 +4,13 @@
 
 `dsh-protest-deadline` एक आपत्ति-और-शिकायत रजिस्टर (质疑与投诉台账) पढ़ता है — परियोजना हेडर और प्रत्येक आपत्ति की एक पंक्ति — और जाँचता है कि ऐसे रजिस्टर से यांत्रिक रूप से क्या अपेक्षित किया जा सकता है: आपत्ति उठाने की तिथि या उत्तर की तिथि दर्ज है या नहीं, तिथियाँ पढ़ी जा सकती हैं और उनका क्रम बनता है या नहीं, उत्तर रजिस्टर में ही लिखी उत्तर-समय-सीमा (`replyDueAt`) के भीतर है या नहीं, प्रत्येक स्थिति आपकी ही शब्दावली से है या नहीं, आपत्ति क्रमांक दोहराए नहीं गए हैं या नहीं, और हेडर खरीद परियोजना का नाम देता है या नहीं।
 
+## Install
+
+```sh
+dsh plugin --profile <name> add dsh-protest-deadline
+dsh --profile <name> --dump-config | grep 'dsh-protest-deadline'
+```
+
 ## आउटपुट कैसा दिखता है
 
 ![Terminal demo of dsh-protest-deadline: real output over its PD-002 fixture](https://raw.githubusercontent.com/PerryLink/dsh-protest-deadline/main/docs/assets/dsh-protest-deadline-hero.png)
@@ -70,13 +77,6 @@ working-day basis that a ledger usually does not record.**
 ## What it does
 
 नियम-सूची, फ़ील्ड और विस्तृत व्यवहार [README.md](README.md#what-it-does) (अंग्रेज़ी मुख्य संस्करण) में हैं। यह प्लगइन केवल उद्धृत धाराओं के सामने शाब्दिक अंतर सूचीबद्ध करता है और हर न चल पाई जाँच को `skipped` में बताता है।
-
-## Install
-
-```sh
-dsh plugin --profile <name> add dsh-protest-deadline
-dsh --profile <name> --dump-config | grep 'dsh-protest-deadline'
-```
 
 ## Configuration
 

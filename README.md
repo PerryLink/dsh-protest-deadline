@@ -4,6 +4,13 @@
 
 `dsh-protest-deadline` reads one query-and-complaint register (质疑与投诉台账) — the project header plus one row per query — and checks what such a register can be held to mechanically: that the date the query was raised or the date it was answered is recorded, that the dates parse and follow one another, that the reply falls inside the deadline the register itself states, that every status comes from your own vocabulary, that the query numbers are unique, and that the header names the procurement project.
 
+## Install
+
+```sh
+dsh plugin --profile <name> add dsh-protest-deadline
+dsh --profile <name> --dump-config | grep 'dsh-protest-deadline'
+```
+
 ## What it looks like
 
 ![Terminal demo of dsh-protest-deadline: real output over its PD-002 fixture](https://raw.githubusercontent.com/PerryLink/dsh-protest-deadline/main/docs/assets/dsh-protest-deadline-hero.png)
@@ -81,13 +88,6 @@ row per query — applies a versioned rule pack, and returns a report.
 | `PD-005` | the status comes from your vocabulary (off by default) | info | local |
 | `PD-006` | the register names its procurement project | warn | principle |
 | `PD-007` | query numbers are unique in the register | warn | principle |
-## Install
-
-```sh
-dsh plugin --profile <name> add dsh-protest-deadline
-dsh --profile <name> --dump-config | grep 'dsh-protest-deadline'
-```
-
 ## Configuration
 
 | Key | Type | Default | Description |
