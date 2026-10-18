@@ -1,5 +1,7 @@
 # dsh-protest-deadline — Verificación de fechas y plazos del registro de impugnaciones y denuncias
 
+[English](README.md) · [简体中文](README-zh.md) · [Español](README-es.md) · [Português](README-pt.md) · [हिन्दी](README-hi.md)
+
 [![DSH Market](https://raw.githubusercontent.com/2BingLing/dsh-market/master/assets/readme/badge-listed-en.svg)](https://dsh.market/)
 
 `dsh-protest-deadline` lee un registro de impugnaciones y denuncias (质疑与投诉台账) —la cabecera del proyecto más una fila por impugnación— y comprueba lo que un registro así puede sostener mecánicamente: que esté registrada la fecha de presentación de la impugnación o la fecha de su respuesta, que las fechas se puedan analizar y sigan un orden, que la respuesta caiga dentro del plazo que el propio registro declara, que cada estado provenga de su propio vocabulario, que los números de impugnación no se repitan y que la cabecera nombre el proyecto de contratación.

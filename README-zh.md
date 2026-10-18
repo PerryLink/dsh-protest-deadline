@@ -1,5 +1,7 @@
 # dsh-protest-deadline — 质疑与投诉期限核对
 
+[English](README.md) · [简体中文](README-zh.md) · [Español](README-es.md) · [Português](README-pt.md) · [हिन्दी](README-hi.md)
+
 [![DSH Market](https://raw.githubusercontent.com/2BingLing/dsh-market/master/assets/readme/badge-listed-en.svg)](https://dsh.market/)
 
 `dsh-protest-deadline` 读取一份质疑与投诉台账——项目表头加每条质疑一行——核对这份台账能够被机械核对的部分：质疑提出日期或答复日期是否填写、日期是否可解析且先后关系是否成立、答复是否落在台账自己写明的答复期限内、处理状态是否取自本机构口径、质疑函编号是否唯一、表头是否写明采购项目。
