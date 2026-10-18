@@ -40,27 +40,13 @@ dsh --profile <name> --dump-config | grep 'dsh-protest-deadline'
 
 **边界（中文译文，以英文原文为准）：** 本插件核对一份 **质疑与投诉台账** 中可被机械核对的部分——关键日期是否记录，这些日期是否可解析且先后关系成立，答复是否落在台账自己写明的期限之内，处理状态是否取自你的取值口径，以及质疑函编号是否唯一。它**不**判定质疑是否在期限内提出、是否应当受理，或是否应当驳回。**这些判断需要采购人或财政部门、送达日期，以及台账通常不会记录的工作日基准。**
 
-> ### ⚠️ What the citation rests on
+> ### ⚠️ 这条引文依据的是什么（以英文原文为准）
 >
-> **《政府采购质疑和投诉办法》(财政部令第94号) was obtained and read verbatim** — the whole text, six chapters
-> and forty-five articles — and `rules/evidence/clause-verification.md` records what was quoted:
-> article 10 (question within **7 working days**), article 13 (reply within **7 working days**), article 17
-> (complaint within 15 working days **after the reply period expires**), article 21 (5 and 8 working days),
-> article 26 (30 working days) and **article 42**, which fixes two calculation rules — 「期间开始之日，
-> 不计算在期间内」 and a roll-over when the final day is a holiday. Article 45 also **repealed**
-> 财政部令第20号, so this pack never cites it.
+> **《政府采购质疑和投诉办法》（财政部令第94号）已取得并逐字读过**——全文六章四十五条——`rules/evidence/clause-verification.md` 记录了所引内容：第十条（质疑期为 **7 个工作日**）、第十三条（答复期为 **7 个工作日**）、第十七条（在**答复期满后** 15 个工作日内投诉）、第二十一条（5 个与 8 个工作日）、第二十六条（30 个工作日）以及**第四十二条**，该条确定了两项计算规则——「期间开始之日，不计算在期间内」以及末日为节假日时的顺延。第四十五条还**废止**了财政部令第20号，因此本规则库从不引用它。
 >
-> **The rule `excerpt` fields still say "本次未取得", and every rule remains `warn` or `info`.** What this
-> plugin checks is an internal register's dates and columns; the measure governs how purchasers and finance
-> departments behave. Calling a blank column a `direct` breach of "shall reply within 7 working days" would
-> dress a record-keeping gap up as a regulatory one. The government procurement law itself was not obtained.
+> **各条规则的 `excerpt` 字段仍写着「本次未取得」，每条规则仍为 `warn` 或 `info`。** 本插件核对的是一个内部台账的日期与栏目；该办法规范的是采购人与财政部门应如何作为。把一个空白栏目说成对「应当在 7 个工作日内答复」的 `direct` 违反，等于把登记上的缺口包装成违规。政府采购法本身本次未取得。
 >
-> **This plugin hard-codes no day count, and the text now proves why.** The periods run in **working days**,
-> article 42 excludes the opening day from the count and rolls the deadline forward off a holiday, and
-> article 17 starts the complaint clock from the **expiry of the reply period** rather than the reply date —
-> while a register usually records calendar dates only. So `PD-003` compares the actual reply date against the
-> deadline **written in the register's own `答复期限` column**, and with that column empty it reports itself in
-> `skipped`. Its finding says "this disagrees with the deadline you recorded", **not** "the reply is late".
+> **本插件不硬编码任何天数，原文现在证明了原因。** 期限按**工作日**计算，第四十二条把开始之日排除在期间之外，并在末日为节假日时顺延；第十七条从**答复期满**而不是答复日起算投诉期限——而台账通常只记录日历日期。因此 `PD-003` 拿实际答复日期与**台账自己 `答复期限` 栏中写明的**期限相比，该栏为空时它把自己记入 `skipped`。它的发现说的是「这与你在台账中记录的期限不一致」，**而不是**「答复逾期」。
 
 ## Compatibility
 
