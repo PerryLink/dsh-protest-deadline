@@ -38,12 +38,7 @@ dsh --profile <name> --dump-config | grep 'dsh-protest-deadline'
 |---|---|---|
 | 《政府采购质疑和投诉办法》 | 财政部令第94号（2017 年 12 月 26 日公布，自 2018 年 3 月 1 日起施行；六章四十五条。⚠️ 本令第四十五条同时废止财政部令第20号《政府采购供应商投诉处理办法》） | PD-001, PD-002, PD-003, PD-004, PD-005, PD-006, PD-007 |
 
-**Boundary:** this plugin checks a **质疑与投诉台账** for what a register can be held to mechanically — that
-the key dates are recorded, that they parse and follow one another, that a reply falls inside the deadline
-the register itself states, that statuses come from your vocabulary, and that query numbers are unique. It
-does **not** decide whether a query was filed in time, whether it should be accepted, or whether it should
-be rejected. **Those calls need the purchaser or the finance department, the service dates, and a
-working-day basis that a ledger usually does not record.**
+**边界（中文译文，以英文原文为准）：** 本插件核对一份 **质疑与投诉台账** 中可被机械核对的部分——关键日期是否记录，这些日期是否可解析且先后关系成立，答复是否落在台账自己写明的期限之内，处理状态是否取自你的取值口径，以及质疑函编号是否唯一。它**不**判定质疑是否在期限内提出、是否应当受理，或是否应当驳回。**这些判断需要采购人或财政部门、送达日期，以及台账通常不会记录的工作日基准。**
 
 > ### ⚠️ What the citation rests on
 >
