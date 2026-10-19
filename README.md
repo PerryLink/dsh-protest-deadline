@@ -15,13 +15,17 @@ dsh --profile <name> --dump-config | grep 'dsh-protest-deadline'
 
 ## What it looks like
 
-![Terminal demo of dsh-protest-deadline: real output over its PD-002 fixture](https://raw.githubusercontent.com/PerryLink/dsh-protest-deadline/main/docs/assets/dsh-protest-deadline-hero.png)
+![Workflow diagram for dsh-protest-deadline: call → plugin → result.](docs/assets/dsh-protest-deadline-flow.svg)
 
-![Animated terminal demo of dsh-protest-deadline](https://raw.githubusercontent.com/PerryLink/dsh-protest-deadline/main/docs/assets/dsh-protest-deadline-demo.gif)
+*Workflow overview: call → plugin → result. The examples below use the real command surface.*
 
-Real output from this plugin over its own `PD-002` test fixture — not a mock-up. The rule pack ships no invented quotations, so a finding names both the clause it applied and the fact that the clause text was not obtained.
+
 
 ## What it answers
+
+### Examples
+
+The table below is the example set: the first row is the detailed walkthrough, the remaining rows are short cases.
 
 | You ask | What it answers |
 |---|---|
