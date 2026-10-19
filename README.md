@@ -3,6 +3,7 @@
 [English](README.md) · [简体中文](README-zh.md) · [Español](README-es.md) · [Português](README-pt.md) · [हिन्दी](README-hi.md)
 
 [![DSH Market](https://raw.githubusercontent.com/2BingLing/dsh-market/master/assets/readme/badge-listed-en.svg)](https://dsh.market/)
+[![dshfind](https://dshfind.com/api/badge/PerryLink/dsh-protest-deadline?metric=downloads)](https://dshfind.com/en/plugins/PerryLink/dsh-protest-deadline?ref=badge)
 
 `dsh-protest-deadline` reads one query-and-complaint register (质疑与投诉台账) — the project header plus one row per query — and checks what such a register can be held to mechanically: that the date the query was raised or the date it was answered is recorded, that the dates parse and follow one another, that the reply falls inside the deadline the register itself states, that every status comes from your own vocabulary, that the query numbers are unique, and that the header names the procurement project.
 
