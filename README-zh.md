@@ -29,6 +29,35 @@ dsh --profile <name> --dump-config | grep 'dsh-protest-deadline'
 
 下表是示例集：第一行是详细走查，其余行是简短案例。
 
+#### 详细输出
+
+**工具** `protest_deadline`
+
+**输入**
+
+~~~json
+{"project":"某某设备采购项目","projectNo":"ZC-2026-018","rows":[{"序号":"ZY-2026-001","质疑人":"某某科技有限公司","质疑提出日期":"","答复收到日期":"2026-03-07","答复期限":"2026-03-09","实际答复日期":""}]}
+~~~
+ 
+**输出**
+
+~~~json
+{
+  "id": "dsh-protest-deadline.PD-001.de09b5a6",
+  "ruleId": "PD-001",
+  "severity": "warn",
+  "locator": {
+    "row": 1,
+    "field": "raisedAt"
+  },
+  "found": "第 1 行 raisedAt、replyAt 都为空",
+  "expected": "raisedAt、replyAt 至少应填写一项",
+  "fix": "补填质疑提出日期与答复日期；本条只核对是否填写，不判断是否在法定期限内"
+}
+~~~
+
+*来源 `dsh-protest-deadline/tests/fixtures/PD-001/PD-001-unsafe.json (cases.json expects 1×PD-001); executed parseMaterial+runCheck, checkedAt=2026-10-06T00:00:00.000Z`*
+
 | 你会问 | 它怎么答 |
 |---|---|
 | 某行的质疑提出日期与答复日期都空着，会被报出吗？ | 会。`PD-001` 要求每行 `raisedAt`、`replyAt` 至少填写一项，两者都为空即报出该行。它只核对这两个日期是否填了其中一个，不判断质疑是否在法定期限内提出——那要结合供应商知道或应知权益受损之日、送达日期与工作日计算，台账里通常记不全。 |

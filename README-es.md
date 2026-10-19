@@ -29,6 +29,35 @@ Salida real de este plugin sobre su propio fixture de prueba `PD-002` — no es 
 
 La tabla siguiente es el conjunto de ejemplos: la primera fila es el caso detallado y las demás son casos breves.
 
+#### Salida detallada
+
+**Herramienta** `protest_deadline`
+
+**Entrada**
+
+~~~json
+{"project":"某某设备采购项目","projectNo":"ZC-2026-018","rows":[{"序号":"ZY-2026-001","质疑人":"某某科技有限公司","质疑提出日期":"","答复收到日期":"2026-03-07","答复期限":"2026-03-09","实际答复日期":""}]}
+~~~
+ 
+**Salida**
+
+~~~json
+{
+  "id": "dsh-protest-deadline.PD-001.de09b5a6",
+  "ruleId": "PD-001",
+  "severity": "warn",
+  "locator": {
+    "row": 1,
+    "field": "raisedAt"
+  },
+  "found": "第 1 行 raisedAt、replyAt 都为空",
+  "expected": "raisedAt、replyAt 至少应填写一项",
+  "fix": "补填质疑提出日期与答复日期；本条只核对是否填写，不判断是否在法定期限内"
+}
+~~~
+
+*Observado en `dsh-protest-deadline/tests/fixtures/PD-001/PD-001-unsafe.json (cases.json expects 1×PD-001); executed parseMaterial+runCheck, checkedAt=2026-10-06T00:00:00.000Z`*
+
 | Usted pregunta | Qué responde |
 |---|---|
 | Una fila deja en blanco tanto la fecha de presentación como la de respuesta. ¿Se informa de ello? | Sí. `PD-001` exige que en cada fila esté relleno al menos uno de `raisedAt` y `replyAt`, e informa de la fila en la que ambos están vacíos. Solo comprueba que uno de los dos esté puesto, no si la impugnación se presentó dentro del plazo legal: eso exige la fecha en que el proveedor conoció el daño, la fecha de notificación y un cómputo en días hábiles que el registro no suele llevar. |

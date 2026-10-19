@@ -28,6 +28,35 @@ dsh --profile <name> --dump-config | grep 'dsh-protest-deadline'
 
 The table below is the example set: the first row is the detailed walkthrough, the remaining rows are short cases.
 
+#### Detailed output
+
+**Tool** `protest_deadline`
+
+**Input**
+
+~~~json
+{"project":"某某设备采购项目","projectNo":"ZC-2026-018","rows":[{"序号":"ZY-2026-001","质疑人":"某某科技有限公司","质疑提出日期":"","答复收到日期":"2026-03-07","答复期限":"2026-03-09","实际答复日期":""}]}
+~~~
+ 
+**Output**
+
+~~~json
+{
+  "id": "dsh-protest-deadline.PD-001.de09b5a6",
+  "ruleId": "PD-001",
+  "severity": "warn",
+  "locator": {
+    "row": 1,
+    "field": "raisedAt"
+  },
+  "found": "第 1 行 raisedAt、replyAt 都为空",
+  "expected": "raisedAt、replyAt 至少应填写一项",
+  "fix": "补填质疑提出日期与答复日期；本条只核对是否填写，不判断是否在法定期限内"
+}
+~~~
+
+*Observed from `dsh-protest-deadline/tests/fixtures/PD-001/PD-001-unsafe.json (cases.json expects 1×PD-001); executed parseMaterial+runCheck, checkedAt=2026-10-06T00:00:00.000Z`*
+
 | You ask | What it answers |
 |---|---|
 | A row leaves both the date the query was raised and the date it was answered blank. Is that reported? | Yes. `PD-001` requires at least one of `raisedAt` and `replyAt` on every row and reports the row where both are empty. It checks only that one of the two is filled, not whether the query was raised inside the legal period: that needs the date the supplier knew of the harm, the service date and a working-day count a register usually does not carry. |
