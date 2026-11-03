@@ -1,6 +1,6 @@
 # dsh-protest-deadline — 质疑与投诉期限核对
 
-## 快速试跑（1 分钟）
+### 快速试跑（1 分钟）
 
 ```bash
 node samples/quickstart/run.mjs --check
