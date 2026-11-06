@@ -1,8 +1,8 @@
 <div align="center">
 
 <picture>
-  <source media="(prefers-color-scheme: dark)" srcset="docs/assets/dsh-protest-deadline-flow-dark.svg">
-  <img src="docs/assets/dsh-protest-deadline-flow-light.svg" width="100%" alt="dsh-protest-deadline 数据流：项目表头 + rows[] 台账 → protest_deadline 工具 → 规则包（PD-001..PD-007）→ issues[] + skipped[] 报告 → 人工复核；配置键见下文">
+  <source media="(prefers-color-scheme: dark)" srcset="docs/assets/dsh-protest-deadline-hero-zh-dark.webp">
+  <img src="docs/assets/dsh-protest-deadline-hero-zh-light.webp" width="100%" alt="dsh-protest-deadline 配图：左列是插件名与价值句；右侧是一份质疑与投诉台账，第 1 行的实际答复 2026-03-20 越过台账自填的答复期限 2026-03-09（相差 11 天），投诉日期 2026-03-12 又早于该答复；下方是 PD-003、PD-004 两条差异与 PD-005 未执行，结论留给复核人">
 </picture>
 
 # dsh-protest-deadline
@@ -43,6 +43,11 @@ dsh plugin --profile <name> add dsh-protest-deadline
 - **给谁用**：招标代理、政府采购经办与内控审核；不用懂命令行，在对话里把材料交给它即可。
 - **你交什么**：这项核对用到的原始材料（表格、清单或文书）；不改原件。Excel 可先转成 JSON/YAML，对话里也能代转。
 - **它交什么**：一份「哪一行、哪一栏、差什么、怎么补」的清单；没能执行的检查逐条列入 `skipped` 并写明原因。
+
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="docs/assets/dsh-protest-deadline-flow-v5-dark.svg">
+  <img src="docs/assets/dsh-protest-deadline-flow-v5-light.svg" width="100%" alt="dsh-protest-deadline 结构图：一份质疑与投诉台账的日期链上，PD-002 提出≤答复、PD-003 提出≤答复≤台账期限、PD-004 答复≤投诉 三条比较以括号标出（PD-004 不成立，投诉早 5 天）；台账级 PD-001/005/006/007 另列；issues[] 与 skipped[] 两条通道汇到复核人，结论不在报告里">
+</picture>
 
 ## 三步上手
 

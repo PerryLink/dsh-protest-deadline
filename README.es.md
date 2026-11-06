@@ -1,8 +1,8 @@
 <div align="center">
 
 <picture>
-  <source media="(prefers-color-scheme: dark)" srcset="docs/assets/dsh-protest-deadline-flow-dark.svg">
-  <img src="docs/assets/dsh-protest-deadline-flow-light.svg" width="100%" alt="Flujo de datos de dsh-protest-deadline: cabecera del proyecto + rows[] del registro → herramienta protest_deadline → paquete de reglas rules/protest-deadline.yaml (PD-001..PD-007) → informe issues[] + skipped[] → revisión humana; la configuración entra por rulesFile / disabledRules / onlyRules / skipNotes / timeoutMs">
+  <source media="(prefers-color-scheme: dark)" srcset="docs/assets/dsh-protest-deadline-hero-en-dark.webp">
+  <img src="docs/assets/dsh-protest-deadline-hero-en-light.webp" width="100%" alt="Imagen de dsh-protest-deadline: a la izquierda el nombre y las frases de valor; a la derecha un registro de impugnaciones y denuncias cuya fila 1 tiene una respuesta del 2026-03-20 posterior al plazo que el propio registro declara (2026-03-09, 11 días de diferencia) y una denuncia del 2026-03-12 anterior a esa respuesta; debajo, las diferencias PD-003 y PD-004 y la omisión PD-005, con la conclusión en manos del revisor">
 </picture>
 
 # dsh-protest-deadline
@@ -43,6 +43,11 @@ No decide si la impugnación se presentó dentro del plazo legal, si debe admiti
 - **Para quién es**: agencias de contratación, responsables de compras públicas y revisores de control interno; no requiere línea de comandos — entregue el material en el chat.
 - **Qué le entrega**: el material original sobre el que trabaja la comprobación (una tabla, un registro o un documento); el original nunca se modifica. Excel puede convertirse antes a JSON/YAML, en el chat si la plataforma lo permite.
 - **Qué recibe**: una lista de «qué fila, qué columna, qué falta y cómo corregirlo»; toda comprobación que no pudo ejecutarse aparece en `skipped` con su motivo.
+
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="docs/assets/dsh-protest-deadline-flow-v5-dark.svg">
+  <img src="docs/assets/dsh-protest-deadline-flow-v5-light.svg" width="100%" alt="Estructura de dsh-protest-deadline: sobre la cadena de fechas de un registro, tres corchetes marcan PD-002 presentación ≤ respuesta, PD-003 presentación ≤ respuesta ≤ plazo del registro y PD-004 respuesta ≤ denuncia (PD-004 no se cumple: la denuncia es 5 días anterior); PD-001/005/006/007 se agrupan aparte; issues[] y skipped[] llegan al revisor y la conclusión no está en el informe">
+</picture>
 
 ## Instalación en tres pasos
 

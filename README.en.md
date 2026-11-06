@@ -1,8 +1,8 @@
 <div align="center">
 
 <picture>
-  <source media="(prefers-color-scheme: dark)" srcset="docs/assets/dsh-protest-deadline-flow-dark.svg">
-  <img src="docs/assets/dsh-protest-deadline-flow-light.svg" width="100%" alt="dsh-protest-deadline data flow: project header + rows[] register → protest_deadline tool → rules/protest-deadline.yaml rule pack (PD-001..PD-007) → issues[] + skipped[] report → human reviewer; config flows in via rulesFile / disabledRules / onlyRules / skipNotes / timeoutMs">
+  <source media="(prefers-color-scheme: dark)" srcset="docs/assets/dsh-protest-deadline-hero-en-dark.webp">
+  <img src="docs/assets/dsh-protest-deadline-hero-en-light.webp" width="100%" alt="dsh-protest-deadline hero: the plugin name and value lines on the left; on the right a query-and-complaint register whose row 1 has a reply on 2026-03-20 past the register's own deadline of 2026-03-09 (11 days apart) and a complaint on 2026-03-12 before that reply; below, the PD-003 and PD-004 differences and the PD-005 skip, with the verdict left to the reviewer">
 </picture>
 
 # dsh-protest-deadline
@@ -43,6 +43,11 @@ It does not decide whether a query was filed inside the legal period, whether it
 - **Who it is for**: procurement agencies, government-procurement officers and internal-control reviewers; no command line required — hand the material over in chat.
 - **What you give it**: the source material the check works on (a table, register, or document); the original is never modified. Excel can be converted to JSON/YAML first, in chat if the platform supports it.
 - **What you get back**: a list of "which row, which column, what is missing, how to fix it"; every check that could not run is listed in `skipped` with its reason.
+
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="docs/assets/dsh-protest-deadline-flow-v5-dark.svg">
+  <img src="docs/assets/dsh-protest-deadline-flow-v5-light.svg" width="100%" alt="dsh-protest-deadline structure: over one register's date chain, three brackets mark PD-002 raised ≤ reply, PD-003 raised ≤ reply ≤ register deadline, and PD-004 reply ≤ complaint (PD-004 fails, the complaint is 5 days early); the register-level PD-001/005/006/007 sit in a separate strip; issues[] and skipped[] both feed the reviewer, and the conclusion is not in the report">
+</picture>
 
 ## Three-step setup
 

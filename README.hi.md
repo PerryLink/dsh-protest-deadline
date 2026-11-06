@@ -1,8 +1,8 @@
 <div align="center">
 
 <picture>
-  <source media="(prefers-color-scheme: dark)" srcset="docs/assets/dsh-protest-deadline-flow-dark.svg">
-  <img src="docs/assets/dsh-protest-deadline-flow-light.svg" width="100%" alt="dsh-protest-deadline डेटा प्रवाह: परियोजना हेडर + rows[] रजिस्टर → protest_deadline टूल → rules/protest-deadline.yaml नियम-पैक (PD-001..PD-007) → issues[] + skipped[] रिपोर्ट → मानवीय समीक्षा; कॉन्फ़िगरेशन rulesFile / disabledRules / onlyRules / skipNotes / timeoutMs से आता है">
+  <source media="(prefers-color-scheme: dark)" srcset="docs/assets/dsh-protest-deadline-hero-en-dark.webp">
+  <img src="docs/assets/dsh-protest-deadline-hero-en-light.webp" width="100%" alt="dsh-protest-deadline चित्र: बाईं ओर प्लगइन का नाम और मूल्य-पंक्तियाँ; दाईं ओर एक आपत्ति-और-शिकायत रजिस्टर जिसकी पंक्ति 1 में 2026-03-20 की प्रतिक्रिया रजिस्टर में लिखी 2026-03-09 की समय-सीमा से 11 दिन का अंतर रखती है और 2026-03-12 की शिकायत उस प्रतिक्रिया से पहले है; नीचे PD-003 और PD-004 के अंतर तथा PD-005 की चूक, निर्णय समीक्षक के पास">
 </picture>
 
 # dsh-protest-deadline
@@ -43,6 +43,11 @@ dsh plugin --profile <name> add dsh-protest-deadline
 - **किसके लिए**: खरीद एजेंसियाँ, सरकारी खरीद अधिकारी और आंतरिक नियंत्रण समीक्षक; कमांड लाइन की ज़रूरत नहीं — सामग्री चैट में सौंप दें।
 - **आप क्या देते हैं**: वह मूल सामग्री जिस पर जाँच चलती है (एक तालिका, रजिस्टर या दस्तावेज़); मूल कभी नहीं बदला जाता। Excel को पहले JSON/YAML में बदला जा सकता है, और प्लेटफ़ॉर्म समर्थन दे तो चैट में भी।
 - **आपको क्या मिलता है**: «कौन-सी पंक्ति, कौन-सा कॉलम, क्या कम है, कैसे सुधारें» की सूची; जो जाँच नहीं चल सकी, वह कारण के साथ `skipped` में दर्ज होती है।
+
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="docs/assets/dsh-protest-deadline-flow-v5-dark.svg">
+  <img src="docs/assets/dsh-protest-deadline-flow-v5-light.svg" width="100%" alt="dsh-protest-deadline संरचना: एक रजिस्टर की तिथि-शृंखला पर तीन कोष्ठक PD-002 प्रस्तुति ≤ प्रतिक्रिया, PD-003 प्रस्तुति ≤ प्रतिक्रिया ≤ रजिस्टर की समय-सीमा और PD-004 प्रतिक्रिया ≤ शिकायत दर्शाते हैं (PD-004 लागू नहीं: शिकायत 5 दिन पहले); PD-001/005/006/007 अलग पट्टी में; issues[] और skipped[] दोनों समीक्षक तक जाते हैं और निष्कर्ष रिपोर्ट में नहीं है">
+</picture>
 
 ## तीन चरणों में शुरुआत
 

@@ -1,0 +1,95 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1100" height="660" viewBox="0 0 1100 660" role="img" aria-label="dsh-protest-deadline 结构图：一份质疑与投诉台账的日期链上，PD-002、PD-003、PD-004 三条比较以括号标出（PD-004 不成立）；台账级 PD-001/005/006/007 另列；issues[] 与 skipped[] 汇到复核人，结论不在报告里">
+<defs>
+<linearGradient id="bg" x1="0" y1="0" x2="0.3" y2="1"><stop offset="0" stop-color="#f9f6fd"/><stop offset="1" stop-color="#e4eaf8"/></linearGradient>
+<filter id="soft" x="-25%" y="-25%" width="150%" height="160%"><feDropShadow dx="0" dy="6" stdDeviation="8" flood-color="#16122c" flood-opacity="0.10"/></filter>
+</defs>
+<rect width="1100" height="660" fill="url(#bg)"/>
+<text x="44" y="58" fill="#141419" font-family="'Consolas','SFMono-Regular',Menlo,ui-monospace,monospace" font-size="26" font-weight="700">dsh-protest-deadline</text>
+<text x="44" y="86" fill="#4d5261" font-family="'Microsoft YaHei','PingFang SC','Noto Sans CJK SC','Source Han Sans SC',sans-serif" font-size="13.5">七条规则只读一份质疑与投诉台账：日期先填齐，再把同一行的日期逐对比较；差异落到行号与栏名。</text>
+<rect x="847.0" y="38" width="209.0" height="26" rx="13.0" fill="#f5f2fb"/>
+<text x="859.0" y="55.025" fill="#4B67B4" font-family="'Microsoft YaHei','PingFang SC','Noto Sans CJK SC','Source Han Sans SC',sans-serif" font-size="11.5">规则包 v2026.1 · PD-001..PD-007</text>
+<rect x="44" y="104" width="1012" height="96" rx="18" fill="#ffffff" stroke="#e6e2ef" stroke-width="1.5" filter="url(#soft)"/>
+<text x="62" y="124" fill="#4B67B4" font-family="'Microsoft YaHei','PingFang SC','Noto Sans CJK SC','Source Han Sans SC',sans-serif" font-size="13.5" font-weight="700">输入 · 质疑与投诉台账（JSON / YAML，只读）</text>
+<text x="1038" y="124" fill="#8f94a4" font-family="'Microsoft YaHei','PingFang SC','Noto Sans CJK SC','Source Han Sans SC',sans-serif" font-size="11" text-anchor="end">列名已归一 · 原件永不修改</text>
+<text x="62" y="145" fill="#4d5261" font-family="'Microsoft YaHei','PingFang SC','Noto Sans CJK SC','Source Han Sans SC',sans-serif" font-size="11.5">某某设备采购项目 · ZC-2026-018 · 某某采购代理机构</text>
+<rect x="62" y="154" width="956" height="40" rx="10" fill="#f5f2fb"/>
+<text x="72" y="168" fill="#4d5261" font-family="'Microsoft YaHei','PingFang SC','Noto Sans CJK SC','Source Han Sans SC',sans-serif" font-size="11">序号</text>
+<text x="222" y="168" fill="#4d5261" font-family="'Microsoft YaHei','PingFang SC','Noto Sans CJK SC','Source Han Sans SC',sans-serif" font-size="11">质疑提出日期</text>
+<text x="396" y="168" fill="#4d5261" font-family="'Microsoft YaHei','PingFang SC','Noto Sans CJK SC','Source Han Sans SC',sans-serif" font-size="11">答复期限</text>
+<text x="546" y="168" fill="#4d5261" font-family="'Microsoft YaHei','PingFang SC','Noto Sans CJK SC','Source Han Sans SC',sans-serif" font-size="11">实际答复日期</text>
+<text x="720" y="168" fill="#4d5261" font-family="'Microsoft YaHei','PingFang SC','Noto Sans CJK SC','Source Han Sans SC',sans-serif" font-size="11">投诉日期</text>
+<text x="870" y="168" fill="#4d5261" font-family="'Microsoft YaHei','PingFang SC','Noto Sans CJK SC','Source Han Sans SC',sans-serif" font-size="11">处理状态</text>
+<text x="72" y="187" fill="#141419" font-family="'Consolas','SFMono-Regular',Menlo,ui-monospace,monospace" font-size="11.5">ZY-2026-001</text>
+<text x="222" y="187" fill="#141419" font-family="'Consolas','SFMono-Regular',Menlo,ui-monospace,monospace" font-size="11.5">2026-03-02</text>
+<text x="396" y="187" fill="#141419" font-family="'Consolas','SFMono-Regular',Menlo,ui-monospace,monospace" font-size="11.5">2026-03-09</text>
+<rect x="538" y="172" width="146" height="20" rx="6" fill="#fdf3e9"/>
+<text x="546" y="187" fill="#141419" font-family="'Consolas','SFMono-Regular',Menlo,ui-monospace,monospace" font-size="11.5">2026-03-06</text>
+<rect x="712" y="172" width="146" height="20" rx="6" fill="#fdf3e9"/>
+<text x="720" y="187" fill="#b45309" font-family="'Consolas','SFMono-Regular',Menlo,ui-monospace,monospace" font-size="11.5">2026-03-01</text>
+<text x="870" y="187" fill="#141419" font-family="'Microsoft YaHei','PingFang SC','Noto Sans CJK SC','Source Han Sans SC',sans-serif" font-size="11.5">已答复</text>
+<rect x="44" y="208" width="1012" height="204" rx="18" fill="#ffffff" stroke="#e6e2ef" stroke-width="1.5" filter="url(#soft)"/>
+<text x="62" y="230" fill="#4B67B4" font-family="'Microsoft YaHei','PingFang SC','Noto Sans CJK SC','Source Han Sans SC',sans-serif" font-size="13.5" font-weight="700">日期链 · 第 1 行（PD-004 样例：投诉早于答复）</text>
+<text x="1038" y="230" fill="#8f94a4" font-family="'Microsoft YaHei','PingFang SC','Noto Sans CJK SC','Source Han Sans SC',sans-serif" font-size="11" text-anchor="end">只比较先后 · 不换算工作日</text>
+<line x1="110.0" y1="352" x2="110.0" y2="360" stroke="#dcd8ea" stroke-width="1" stroke-linecap="round"/>
+<line x1="212.44444444444446" y1="352" x2="212.44444444444446" y2="360" stroke="#dcd8ea" stroke-width="1" stroke-linecap="round"/>
+<line x1="314.8888888888889" y1="352" x2="314.8888888888889" y2="360" stroke="#dcd8ea" stroke-width="1" stroke-linecap="round"/>
+<line x1="417.3333333333333" y1="352" x2="417.3333333333333" y2="360" stroke="#dcd8ea" stroke-width="1" stroke-linecap="round"/>
+<line x1="519.7777777777778" y1="352" x2="519.7777777777778" y2="360" stroke="#dcd8ea" stroke-width="1" stroke-linecap="round"/>
+<line x1="622.2222222222223" y1="352" x2="622.2222222222223" y2="360" stroke="#dcd8ea" stroke-width="1" stroke-linecap="round"/>
+<line x1="724.6666666666666" y1="352" x2="724.6666666666666" y2="360" stroke="#dcd8ea" stroke-width="1" stroke-linecap="round"/>
+<line x1="827.1111111111111" y1="352" x2="827.1111111111111" y2="360" stroke="#dcd8ea" stroke-width="1" stroke-linecap="round"/>
+<line x1="929.5555555555555" y1="352" x2="929.5555555555555" y2="360" stroke="#dcd8ea" stroke-width="1" stroke-linecap="round"/>
+<line x1="1032.0" y1="352" x2="1032.0" y2="360" stroke="#dcd8ea" stroke-width="1" stroke-linecap="round"/>
+<line x1="110" y1="356" x2="1032" y2="356" stroke="#dcd8ea" stroke-width="2" stroke-linecap="round"/>
+<path d="M212.44444444444446 264 H622.2222222222223" fill="none" stroke="#4B67B4" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M212.44444444444446 259 V269" fill="none" stroke="#4B67B4" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M622.2222222222223 259 V269" fill="none" stroke="#4B67B4" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>
+<text x="417.33333333333337" y="256" fill="#4B67B4" font-family="'Microsoft YaHei','PingFang SC','Noto Sans CJK SC','Source Han Sans SC',sans-serif" font-size="11.5" text-anchor="middle">PD-002 提出 ≤ 答复 √</text>
+<path d="M212.44444444444446 292 H929.5555555555555" fill="none" stroke="#4B67B4" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M212.44444444444446 287 V297" fill="none" stroke="#4B67B4" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M929.5555555555555 287 V297" fill="none" stroke="#4B67B4" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>
+<text x="571.0" y="284" fill="#4B67B4" font-family="'Microsoft YaHei','PingFang SC','Noto Sans CJK SC','Source Han Sans SC',sans-serif" font-size="11.5" text-anchor="middle">PD-003 提出 ≤ 答复 ≤ 台账期限 √</text>
+<path d="M110.0 320 H622.2222222222223" fill="none" stroke="#b45309" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M110.0 315 V325" fill="none" stroke="#b45309" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M622.2222222222223 315 V325" fill="none" stroke="#b45309" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>
+<text x="366.11111111111114" y="312" fill="#b45309" font-family="'Microsoft YaHei','PingFang SC','Noto Sans CJK SC','Source Han Sans SC',sans-serif" font-size="11.5" text-anchor="middle">PD-004 答复 ≤ 投诉 × 投诉早 5 天</text>
+<circle cx="110.0" cy="356" r="6" fill="#b45309" stroke="#ffffff" stroke-width="2.5"/>
+<circle cx="212.44444444444446" cy="356" r="6" fill="#4B67B4" stroke="#ffffff" stroke-width="2.5"/>
+<circle cx="622.2222222222223" cy="356" r="6" fill="#4B67B4" stroke="#ffffff" stroke-width="2.5"/>
+<path d="M929.5555555555555 349 L936.5555555555555 356 L929.5555555555555 363 L922.5555555555555 356 Z" fill="#4B67B4"/>
+<text x="110.0" y="376" fill="#b45309" font-family="'Microsoft YaHei','PingFang SC','Noto Sans CJK SC','Source Han Sans SC',sans-serif" font-size="11.5" text-anchor="middle">投诉 03-01</text>
+<text x="212.44444444444446" y="376" fill="#141419" font-family="'Microsoft YaHei','PingFang SC','Noto Sans CJK SC','Source Han Sans SC',sans-serif" font-size="11.5" text-anchor="middle">提出 03-02</text>
+<text x="622.2222222222223" y="376" fill="#141419" font-family="'Microsoft YaHei','PingFang SC','Noto Sans CJK SC','Source Han Sans SC',sans-serif" font-size="11.5" text-anchor="middle">答复 03-06</text>
+<text x="929.5555555555555" y="376" fill="#4B67B4" font-family="'Microsoft YaHei','PingFang SC','Noto Sans CJK SC','Source Han Sans SC',sans-serif" font-size="11.5" text-anchor="middle">台账期限 03-09</text>
+<text x="62" y="400" fill="#8f94a4" font-family="'Microsoft YaHei','PingFang SC','Noto Sans CJK SC','Source Han Sans SC',sans-serif" font-size="11.5">括号 = 一条规则放在一起比较的日期；√ 成立 · × 不成立；菱形 = 台账自填的期限，插件不代算工作日。</text>
+<rect x="44" y="420" width="1012" height="44" rx="18" fill="#ffffff" stroke="#e6e2ef" stroke-width="1.5" filter="url(#soft)"/>
+<text x="62" y="446" fill="#4B67B4" font-family="'Microsoft YaHei','PingFang SC','Noto Sans CJK SC','Source Han Sans SC',sans-serif" font-size="13" font-weight="700">台账级检查（不比较日期先后）</text>
+<circle cx="308" cy="441" r="3.5" fill="#16a34a"/>
+<text x="320" y="446" fill="#4d5261" font-family="'Microsoft YaHei','PingFang SC','Noto Sans CJK SC','Source Han Sans SC',sans-serif" font-size="11">PD-001 至少一项 · 通过</text>
+<circle cx="498" cy="441" r="3.5" fill="#b45309"/>
+<text x="510" y="446" fill="#4d5261" font-family="'Microsoft YaHei','PingFang SC','Noto Sans CJK SC','Source Han Sans SC',sans-serif" font-size="11">PD-005 状态取值 · skipped</text>
+<circle cx="688" cy="441" r="3.5" fill="#16a34a"/>
+<text x="700" y="446" fill="#4d5261" font-family="'Microsoft YaHei','PingFang SC','Noto Sans CJK SC','Source Han Sans SC',sans-serif" font-size="11">PD-006 表头项目 · 通过</text>
+<circle cx="878" cy="441" r="3.5" fill="#16a34a"/>
+<text x="890" y="446" fill="#4d5261" font-family="'Microsoft YaHei','PingFang SC','Noto Sans CJK SC','Source Han Sans SC',sans-serif" font-size="11">PD-007 编号唯一 · 通过</text>
+<rect x="44" y="472" width="606" height="96" rx="18" fill="#ffffff" stroke="#e6e2ef" stroke-width="1.5" filter="url(#soft)"/>
+<text x="62" y="496" fill="#4B67B4" font-family="'Microsoft YaHei','PingFang SC','Noto Sans CJK SC','Source Han Sans SC',sans-serif" font-size="13.5" font-weight="700">issues[] · 1 条</text>
+<rect x="573.0" y="482" width="57.0" height="22" rx="11.0" fill="#f5f2fb"/>
+<text x="583.0" y="496.85" fill="#b45309" font-family="'Microsoft YaHei','PingFang SC','Noto Sans CJK SC','Source Han Sans SC',sans-serif" font-size="11" font-weight="700">warn 1</text>
+<text x="62" y="520" fill="#b45309" font-family="'Consolas','SFMono-Regular',Menlo,ui-monospace,monospace" font-size="11">PD-004 · 第 1 行 · replyAt</text>
+<text x="62" y="542" fill="#141419" font-family="'Microsoft YaHei','PingFang SC','Noto Sans CJK SC','Source Han Sans SC',sans-serif" font-size="11.5">「replyAt」2026-03-06 晚于「complaintAt」2026-03-01</text>
+<text x="62" y="560" fill="#8f94a4" font-family="'Microsoft YaHei','PingFang SC','Noto Sans CJK SC','Source Han Sans SC',sans-serif" font-size="11">建议核对：两个日期是否填反；本条只比较先后</text>
+<rect x="664" y="472" width="392" height="96" rx="18" fill="#ffffff" stroke="#e6e2ef" stroke-width="1.5" filter="url(#soft)"/>
+<text x="682" y="496" fill="#4d5261" font-family="'Microsoft YaHei','PingFang SC','Noto Sans CJK SC','Source Han Sans SC',sans-serif" font-size="13.5" font-weight="700">skipped[] · 1 条</text>
+<rect x="974.0" y="482" width="62.0" height="22" rx="11.0" fill="#f5f2fb"/>
+<text x="984.0" y="496.85" fill="#8f94a4" font-family="'Microsoft YaHei','PingFang SC','Noto Sans CJK SC','Source Han Sans SC',sans-serif" font-size="11" font-weight="700">PD-005</text>
+<text x="682" y="520" fill="#8f94a4" font-family="'Consolas','SFMono-Regular',Menlo,ui-monospace,monospace" font-size="11">PD-005 · values 未配置</text>
+<text x="682" y="542" fill="#141419" font-family="'Microsoft YaHei','PingFang SC','Noto Sans CJK SC','Source Han Sans SC',sans-serif" font-size="11.5">「status」取值口径由本机构规定，不硬编码</text>
+<text x="682" y="560" fill="#8f94a4" font-family="'Microsoft YaHei','PingFang SC','Noto Sans CJK SC','Source Han Sans SC',sans-serif" font-size="11">空 issues ≠ 没问题：两条通道一起读</text>
+<rect x="44" y="576" width="1012" height="30" rx="18" fill="#ffffff" stroke="#4B67B4" stroke-width="1.5" filter="url(#soft)"/>
+<text x="62" y="596" fill="#141419" font-family="'Microsoft YaHei','PingFang SC','Noto Sans CJK SC','Source Han Sans SC',sans-serif" font-size="13.5" font-weight="700">复核人 · 结论不在报告里</text>
+<text x="1038" y="596" fill="#4d5261" font-family="'Microsoft YaHei','PingFang SC','Noto Sans CJK SC','Source Han Sans SC',sans-serif" font-size="11.5" text-anchor="end">不判是否逾期 / 是否受理 / 是否驳回</text>
+<line x1="44" y1="616" x2="1056" y2="616" stroke="#dcd8ea" stroke-width="1" stroke-linecap="round"/>
+<text x="44" y="636" fill="#4d5261" font-family="'Microsoft YaHei','PingFang SC','Noto Sans CJK SC','Source Han Sans SC',sans-serif" font-size="11">严重级封顶：direct ≤ error · derived-from-principle ≤ warn · institutional-configuration ≤ info</text>
+<text x="44" y="652" fill="#8f94a4" font-family="'Microsoft YaHei','PingFang SC','Noto Sans CJK SC','Source Han Sans SC',sans-serif" font-size="11">config：rulesFile · disabledRules · onlyRules · skipNotes · timeoutMs ｜ 只读材料 · 无网络 · 不调用模型</text>
+</svg>
