@@ -1,0 +1,35 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1280" height="400" viewBox="0 0 1280 400" role="img" aria-label="dsh-protest-deadline data flow">
+<title>dsh-protest-deadline data flow</title>
+<rect width="1280" height="400" rx="18" fill="#ffffff"/>
+<text x="40" y="62" fill="#1f2328" font-family="ui-sans-serif,system-ui,sans-serif" font-size="30" font-weight="700">dsh-protest-deadline</text>
+<text x="40" y="94" fill="#57606a" font-family="ui-monospace,monospace" font-size="16">query &amp; complaint register check · read-only · no network, no model call</text>
+<line x1="40" y1="116" x2="1240" y2="116" stroke="#d0d7de"/>
+<rect x="40" y="150" width="200" height="96" rx="14" fill="#f6f8fa" stroke="#d0d7de" stroke-width="2"/>
+<text x="140" y="190" fill="#1f2328" text-anchor="middle" font-family="ui-monospace,monospace" font-size="16" font-weight="700">project + rows[]</text>
+<text x="140" y="218" fill="#57606a" text-anchor="middle" font-family="ui-monospace,monospace" font-size="12">JSON / YAML register</text>
+<path d="M243 198h21" stroke="#57606a" stroke-width="2.5"/>
+<path d="M261 192l8 6-8 6" fill="none" stroke="#57606a" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+<rect x="270" y="150" width="200" height="96" rx="14" fill="#f6f8fa" stroke="#4B67B4" stroke-width="2"/>
+<text x="370" y="190" fill="#1f2328" text-anchor="middle" font-family="ui-monospace,monospace" font-size="16" font-weight="700">protest_deadline</text>
+<text x="370" y="218" fill="#57606a" text-anchor="middle" font-family="ui-monospace,monospace" font-size="12">tool · native | ptc</text>
+<path d="M473 198h21" stroke="#57606a" stroke-width="2.5"/>
+<path d="M491 192l8 6-8 6" fill="none" stroke="#57606a" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+<rect x="500" y="150" width="200" height="96" rx="14" fill="#f6f8fa" stroke="#d0d7de" stroke-width="2"/>
+<text x="600" y="190" fill="#1f2328" text-anchor="middle" font-family="ui-monospace,monospace" font-size="12" font-weight="700">rules/protest-deadline.yaml</text>
+<text x="600" y="218" fill="#57606a" text-anchor="middle" font-family="ui-monospace,monospace" font-size="12">PD-001 .. PD-007</text>
+<path d="M703 198h21" stroke="#57606a" stroke-width="2.5"/>
+<path d="M721 192l8 6-8 6" fill="none" stroke="#57606a" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+<rect x="730" y="150" width="200" height="96" rx="14" fill="#f6f8fa" stroke="#d0d7de" stroke-width="2"/>
+<text x="830" y="190" fill="#1f2328" text-anchor="middle" font-family="ui-monospace,monospace" font-size="16" font-weight="700">report</text>
+<text x="830" y="218" fill="#57606a" text-anchor="middle" font-family="ui-monospace,monospace" font-size="12">issues[] + skipped[]</text>
+<path d="M933 198h21" stroke="#57606a" stroke-width="2.5"/>
+<path d="M951 192l8 6-8 6" fill="none" stroke="#57606a" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+<rect x="960" y="150" width="200" height="96" rx="14" fill="#f6f8fa" stroke="#16a34a" stroke-width="2"/>
+<text x="1060" y="190" fill="#1f2328" text-anchor="middle" font-family="ui-monospace,monospace" font-size="16" font-weight="700">reviewer</text>
+<text x="1060" y="218" fill="#57606a" text-anchor="middle" font-family="ui-monospace,monospace" font-size="12">verdict stays human</text>
+<path d="M370 246v39" stroke="#4B67B4" stroke-width="2" stroke-dasharray="5 5"/>
+<path d="M600 246v39" stroke="#4B67B4" stroke-width="2" stroke-dasharray="5 5"/>
+<rect x="260" y="285" width="660" height="52" rx="12" fill="#f6f8fa" stroke="#4B67B4" stroke-width="2"/>
+<text x="590" y="318" fill="#1f2328" text-anchor="middle" font-family="ui-monospace,monospace" font-size="14">config · rulesFile · disabledRules · onlyRules · skipNotes · timeoutMs</text>
+<text x="40" y="378" fill="#57606a" font-family="ui-monospace,monospace" font-size="13">severity caps: derived-from-principle &lt;= warn · institutional-configuration &lt;= info · excerpt must be a verbatim quote</text>
+</svg>
