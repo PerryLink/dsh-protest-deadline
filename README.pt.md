@@ -49,6 +49,11 @@ Não decide se a impugnação foi apresentada dentro do prazo legal, se deve ser
   <img src="docs/assets/dsh-protest-deadline-flow-v5-light.svg" width="100%" alt="Estrutura do dsh-protest-deadline: sobre a cadeia de datas de um registo, três parênteses marcam PD-002 apresentação ≤ resposta, PD-003 apresentação ≤ resposta ≤ prazo do registo e PD-004 resposta ≤ denúncia (PD-004 não se verifica: a denúncia é 5 dias anterior); PD-001/005/006/007 ficam numa faixa própria; issues[] e skipped[] chegam ao revisor e a conclusão não está no relatório">
 </picture>
 
+![dsh-protest-deadline: execução real de terminal](docs/assets/dsh-protest-deadline-demo.gif)
+
+*Repetição animada de uma execução real registrada neste repositório.*
+
+
 ## Instalação em três passos
 
 1. **Instalar** (escolha um canal):

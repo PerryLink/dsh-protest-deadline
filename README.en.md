@@ -122,6 +122,10 @@ Search "Tender Compliance Suite" in WorkBuddy / Coze (the full set; this check i
 
 ### Examples
 
+![dsh-protest-deadline: real terminal run](docs/assets/dsh-protest-deadline-demo.gif)
+
+*Animated replay of a real run recorded in this repository.*
+
 These are the plugin's real entry points; install once, then call one. The first row below is the detailed walkthrough and the rest are short cases.
 
 **Detailed example** — tool `protest_deadline`, input:

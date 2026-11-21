@@ -36,6 +36,10 @@ dsh plugin --profile <name> add dsh-protest-deadline
 
 ## 它是什么
 
+![dsh-protest-deadline 真实终端运行](docs/assets/dsh-protest-deadline-demo.gif)
+
+*本仓库一次真实运行的动图回放。*
+
 `dsh-protest-deadline` 读取一份质疑与投诉台账——项目表头加每条质疑一行——核对这份台账自身能被机械核对的部分：质疑提出日期或答复日期是否至少填写一项、两个日期的先后是否成立、答复是否落在台账自己写明的答复期限内、投诉日期是否早于答复日期、处理状态是否取自本机构口径、表头是否写明采购项目、质疑函编号是否唯一。
 
 它不判定质疑是否在法定期限内提出、是否应当受理、是否应当驳回——差异清单交给复核人。

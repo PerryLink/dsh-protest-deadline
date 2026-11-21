@@ -49,6 +49,11 @@ dsh plugin --profile <name> add dsh-protest-deadline
   <img src="docs/assets/dsh-protest-deadline-flow-v5-light.svg" width="100%" alt="dsh-protest-deadline संरचना: एक रजिस्टर की तिथि-शृंखला पर तीन कोष्ठक PD-002 प्रस्तुति ≤ प्रतिक्रिया, PD-003 प्रस्तुति ≤ प्रतिक्रिया ≤ रजिस्टर की समय-सीमा और PD-004 प्रतिक्रिया ≤ शिकायत दर्शाते हैं (PD-004 लागू नहीं: शिकायत 5 दिन पहले); PD-001/005/006/007 अलग पट्टी में; issues[] और skipped[] दोनों समीक्षक तक जाते हैं और निष्कर्ष रिपोर्ट में नहीं है">
 </picture>
 
+![dsh-protest-deadline का असली टर्मिनल रन](docs/assets/dsh-protest-deadline-demo.gif)
+
+*इस रिपॉज़िटरी में दर्ज असली रन का एनिमेटेड रीप्ले।*
+
+
 ## तीन चरणों में शुरुआत
 
 1. **इंस्टॉल करें** (कोई एक चैनल चुनें):
