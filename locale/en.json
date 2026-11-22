@@ -1,6 +1,6 @@
 {
   "meta": {
     "title": "Protest deadline check",
-    "description": "质疑与投诉期限核对（按公开的政府采购质疑投诉规定核对期限与台账自洽，仅提示差异，不作出定性结论）"
+    "description": "Turn the gaps and out-of-order dates in a query-and-complaint register into a row-by-row list of what is missing — the verdict stays with the reviewer."
   }
 }

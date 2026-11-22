@@ -7,6 +7,8 @@
 
 # dsh-protest-deadline
 
+Current version `0.2.14`.
+
 **Turn the gaps and out-of-order dates in a query-and-complaint register into a row-by-row list of what is missing — the verdict stays with the reviewer.**
 
 A data-only checker plugin for DeepSeek Harness: it reads one query-and-complaint register (the project header plus one row per query), applies the versioned rule pack it ships (PD-001..PD-007), and lists only the differences it can point to inside the register — never a compliance verdict, never a liability finding.
